@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+}
+.app_logo{
+    color: #fff;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+.app_logo >strong{
+    font-size: 1rem;
+}
+.app_logo > img{
+    margin-right: 5px;
+    width: 3rem;
+}
+.navbar{
+    display: flex;
+    flex:1  50px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-links>a{
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-links>a:hover{
+/*     font-size: 1.5rem;
+ */    transform: scale(1.2);
+}
+
+
