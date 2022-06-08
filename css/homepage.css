@@ -1,0 +1,46 @@
+.side-panel{
+    grid-area: sidepanel;
+    background-color: aquamarine;
+    padding-left: 20px;
+}
+.music-player-content{
+    grid-area:musicplayer;
+    background-color: yellow;
+}
+/* .music-player-content{
+    grid-area:musicplayer;
+} */
+footer{
+    grid-area: footer;
+    background-color: violet;
+    height: auto;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(5,20%);
+    grid-template-areas: 
+    "sidepanel musicplayer musicplayer musicplayer musicplayer"
+    "sidepanel musicplayer musicplayer musicplayer musicplayer"
+    "sidepanel musicplayer musicplayer musicplayer musicplayer"
+    "sidepanel musicplayer musicplayer musicplayer musicplayer"
+    "sidepanel musicplayer musicplayer musicplayer musicplayer"
+    "sidepanel musicplayer musicplayer musicplayer musicplayer"
+    "footer footer footer footer footer"
+    ;
+}
+ul>li{
+    display: flex;
+    align-items: center;   
+    margin: 5px 0;
+}
+
+ul>li>span>img{
+    width: 35px;
+}
+
+.home-search-lib-links:first-child{
+    margin-top: 2.5rem;
+}
