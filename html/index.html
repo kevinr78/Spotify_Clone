@@ -11,21 +11,90 @@
     <title>Spotify </title>
 </head>
 <body>
-    <header>
+    <header class="brand-header">
        
             <div class="app_logo">
-                <img src="../assets/img/spotify-logo.png" alt="">
+                <img src="../assets/img/day26-rainbow.svg" alt="Brand Logo">
                 <strong>Spotify</strong>
             </div>
             <nav class="navbar">
                 <div class="nav-links">
-                    <a href="" class="login">Login</a>
+                    <a href="" class="login-button">Login</a>
                 </div>
                 <div class="nav-links">
                     <a href="" class="sign-up">Sign-up</a>
                 </div>
             </nav>
-      
     </header>
+    <section class="login">
+        <div class="login-image">
+            <img src="../assets/img/main_background.png" alt="">
+        </div>
+        <div class="login-container" id="login-container">
+            <header class="login-container-text"> 
+                <strong>
+                Continue listening to your favourite music
+            </strong> 
+        </header>
+            <form action="" class="login-form"> 
+                <div class="email">
+                    <label for="email">Email Address</label>
+                    <input type="email" required name="email" id="email">
+                </div>
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input type="password" required name="password" id="password">
+                </div>
+            </form>
+            <div class="login-remember-me">
+                <div>
+                    <input type="checkbox" name="remember_me" id="remember_me">
+                    <label for="remember_me">Remember Me</label>
+                </div>
+                 <button type="submit">Login</button>
+            </div>
+           <hr>
+            <a id="signup">Sign Up</a>
+        </div>
+
+        <!-- Sign In Container -->
+        <div class="signin-container" id="signin-container">
+            <header class="signin-container-text"> 
+                <strong>
+                 Join millions already listening!!
+            </strong> 
+        </header>
+            <form action="" class="signin-form"> 
+                <div class="email">
+                    <label for="email">Email Address</label>
+                    <input type="email" required name="email" id="email">
+                </div>
+                <div class="password">
+                    <label for="password">Password</label>
+                    <input type="password" required name="password" id="password">
+                </div>
+            </form>
+            <div class="signin-button">
+                 <button type="submit">Sign In</button>
+            </div>
+            <hr>
+            <a id="login">Already have an account? Login</a>
+        </div>
+    </section>
 </body>
+<script>
+
+let login = document.getElementById("login")
+let signup = document.getElementById("signup")
+
+signup.onclick = ()=>{
+    document.getElementById('signin-container').style.display = 'flex';
+    document.getElementById('login-container').style.display = 'none';
+}
+
+login.onclick= ()=>{
+    document.getElementById('signin-container').style.display = 'none';
+    document.getElementById('login-container').style.display = 'flex';
+}
+</script>
 </html>

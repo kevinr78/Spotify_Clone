@@ -5,9 +5,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-header{
+.brand-header{
     width: 100%;
-    background-color: #000000;
+    background-color: #6c63ff;
     display: flex;
     justify-content: space-around;
 }
@@ -23,8 +23,9 @@ header{
     font-size: 1rem;
 }
 .app_logo > img{
+    border-radius: 10px;
     margin-right: 5px;
-    width: 3rem;
+    width: 3.5rem;
 }
 .navbar{
     display: flex;
@@ -39,8 +40,98 @@ header{
     font-weight: bold;
 }
 .nav-links>a:hover{
-/*     font-size: 1.5rem;
- */    transform: scale(1.2);
+    font-size: 1.1rem;
+
+    transition:.2s ease-in ;
 }
 
 
+.bg{
+  background-image: url("../assets/img/main_background.png");
+  width: 100%;
+  min-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.login{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    height: 100vh;
+}
+
+.login-image{
+   display: flex;
+   justify-content:center ;
+   align-items: center;
+}
+.login-image>img{
+    height: auto;
+    max-width: 100%;
+}
+
+.login-container, .signin-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15%;
+    transition: 1s ease-in;
+}
+.login-container-text,.signin-container-text {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    color: #6c63ff;
+}
+.login-form,.login-remember-me, .signin-form, hr{
+    width: 40%;
+}
+
+hr{
+    background-color: #6c63ff;
+    margin: 15px 0;
+}
+.email,.password{
+    display: flex;
+    flex-direction: column;
+    margin: 10% 0;
+    width: 100%;
+}
+.email>label,.password>label{
+    font-weight: bolder;
+    margin-bottom: 0.4rem;
+    color: #000000;
+}
+.email>input,.password>input{
+    height: 30px;
+    outline: none;
+    border: 1px solid #969696;
+}
+.login-remember-me{
+    display: flex;
+    justify-content: space-between;
+}
+.login-remember-me button , .signin-button button{
+    background-color: #6c63ff;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+}
+.signin-button{
+    position: relative;
+}
+#login,#signup{
+    text-decoration: underline;
+}
+#login:hover,#signup:hover{
+    cursor: pointer;
+}
+.remember_me:checked {
+    background-color: #6c63ff;
+}
+.signin-container{
+    display: none;
+}
