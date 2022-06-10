@@ -37,10 +37,31 @@ ul>li{
     margin: 5px 0;
 }
 
-ul>li>span>img{
+.icons{
     width: 35px;
 }
-
 .home-search-lib-links:first-child{
     margin-top: 2.5rem;
+}
+
+.song-details-container, .song-controls,.music-controls,.song-player ,.playback-features{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.song-player, .song-details-container, .playback-features{
+    flex: 2;
+}
+.song-details,.song-player{
+    flex-direction: column;
+}
+
+
+.music-control-buttons{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.music-control-buttons:hover , input[type="range"]{
+    cursor: pointer;
 }

@@ -12,26 +12,42 @@
     <section class="side-panel">
       <ul class="home-search-lib-links">
         <li>
-          <span><img src="../assets/img/Home.svg" alt="" /></span> Home
+          <span><img class="icons" src="../assets/img/Home.svg" alt="" /></span>
+          Home
         </li>
         <li>
-          <span><img src="../assets/img/Search.svg" alt="" /></span> Search
+          <span
+            ><img class="icons" src="../assets/img/Search.svg" alt=""
+          /></span>
+          Search
         </li>
         <li>
-          <span><img src="../assets/img/your_library.svg" alt="" /></span>Your
-          Library
+          <span
+            ><img
+              class="icons"
+              src="../assets/img/your_library.svg"
+              alt="" /></span
+          >Your Library
         </li>
         <hr />
       </ul>
 
       <ul class="create-likeSongs-links">
         <li>
-          <span><img src="../assets/img/Create_playlist.svg" alt="" /></span
+          <span
+            ><img
+              class="icons"
+              src="../assets/img/Create_playlist.svg"
+              alt="" /></span
           >Create Playlist
         </li>
         <li>
-          <span><img src="../assets/img/Like_Songs.svg" alt="" /></span>Like
-          Songs
+          <span
+            ><img
+              class="icons"
+              src="../assets/img/Like_Songs.svg"
+              alt="" /></span
+          >Like Songs
         </li>
       </ul>
 
@@ -49,10 +65,93 @@
       cum aperiam doloremque?
     </section>
     <footer class="music-controls">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore,
-      cupiditate minima. Iste eos ea, exercitationem, velit ipsum ut quo dicta
-      odio voluptatum accusamus libero commodi dolor distinctio hic, illum
-      tenetur.
+      <div class="song-details-container">
+        <div class="song-img">
+          <img src="../assets/img/Home.svg" alt="Home Icon" />
+        </div>
+        <div class="song-details">
+          <p class="song-name">Song Name</p>
+          <p class="song-artist">Song Artist</p>
+        </div>
+      </div>
+      <div class="song-player">
+        <div class="song-controls">
+          <div class="previous-track">
+            <button class="music-control-buttons">
+              <img
+                class="icons"
+                src="../assets/img/previous-track.svg"
+                alt="Previous"
+              />
+            </button>
+          </div>
+          <div class="play-pause-button">
+            <button class="music-control-buttons">
+              <img
+                class="icons"
+                src="../assets/img/play.svg"
+                alt="Play Button"
+              />
+            </button>
+            <button class="music-control-buttons">
+              <img
+                class="icons"
+                src="../assets/img/pause.svg"
+                alt="Pause Button"
+              />
+            </button>
+          </div>
+          <div class="next-track">
+            <button class="music-control-buttons">
+              <img
+                class="icons"
+                src="../assets/img/next-track.svg"
+                alt="Next"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="audio-track">
+          <span class="start-time">0:00</span>
+          <input
+            type="range"
+            name="audio-track"
+            id="audio-track"
+            min="0"
+            max="100"
+            value="0"
+          />
+          <span class="end-time">0:00</span>
+        </div>
+      </div>
+      <div class="playback-features">
+        <div class="add-to-queue">
+          <button class="music-control-buttons">
+            <img
+              class="icons"
+              src="../assets/img/queue_music.svg"
+              alt="Add to queue"
+            />
+          </button>
+        </div>
+        <div class="volume-control">
+          <button class="music-control-buttons">
+            <img
+              class="icons"
+              src="../assets/img/full_volume.svg"
+              alt="Volume"
+            />
+          </button>
+          <button class="music-control-buttons">
+            <img
+              class="icons"
+              src="../assets/img/mute_volume.svg"
+              alt="Volume"
+            />
+          </button>
+          <input type="range" name="volume-control" id="volume-control" />
+        </div>
+      </div>
     </footer>
   </body>
 </html>
