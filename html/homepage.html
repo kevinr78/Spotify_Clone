@@ -8,66 +8,147 @@
     <link rel="stylesheet" href="../css/master.css" />
     <link rel="stylesheet" href="../css/homepage.css" />
   </head>
+
   <body>
     <section class="side-panel">
+      <!-- Side-Panel-Browse-Music -->
       <ul class="home-search-lib-links">
+        <h5>Browse Music</h5>
         <li>
-          <span><img class="icons" src="../assets/img/Home.svg" alt="" /></span>
-          Home
+          <img class="icons" src="../assets/img/Home.png" alt=" Home" />
+          <span>Home</span>
         </li>
         <li>
-          <span
-            ><img class="icons" src="../assets/img/Search.svg" alt=""
-          /></span>
-          Search
+          <img
+            class="icons"
+            src="../assets/img/All_Songs.png"
+            alt=" All Songs"
+          />
+          <span> All Songs</span>
         </li>
         <li>
-          <span
-            ><img
-              class="icons"
-              src="../assets/img/your_library.svg"
-              alt="" /></span
-          >Your Library
-        </li>
-        <hr />
-      </ul>
-
-      <ul class="create-likeSongs-links">
-        <li>
-          <span
-            ><img
-              class="icons"
-              src="../assets/img/Create_playlist.svg"
-              alt="" /></span
-          >Create Playlist
+          <img class="icons" src="../assets/img/Search.png" alt="Search" />
+          <span> Search</span>
         </li>
         <li>
-          <span
-            ><img
-              class="icons"
-              src="../assets/img/Like_Songs.svg"
-              alt="" /></span
-          >Like Songs
+          <img class="icons" src="../assets/img/Create_playlist.png" alt="" />
+          <span>Create Playlist</span>
         </li>
       </ul>
-
-      <hr />
-
+      <!-- My Music Section -->
+      <ul class="create-like-Songs-links">
+        <h5>My Music</h5>
+        <li>
+          <img
+            class="icons"
+            src="../assets/img/favourite.png"
+            alt="Favourites"
+          />
+          <span>Favourites</span>
+        </li>
+        <li>
+          <img
+            class="icons"
+            src="../assets/img/your_library.png"
+            alt="Your Library"
+          />
+          <span>Your Library</span>
+        </li>
+        <li>
+          <img
+            class="icons"
+            src="../assets/img/play_history.png"
+            alt="Play History"
+          />
+          <span>Play History</span>
+        </li>
+      </ul>
+      <!-- Side-Panel-Playlists -->
       <ul class="playlists">
-        <li>Fav's</li>
-        <li>Hindi</li>
+        <h5>Playlists</h5>
+        <li>
+          <img class="icons" src="../assets/img/playlist_icon.png" alt="Mood" />
+          <span>Mood</span>
+        </li>
+        <li>
+          <img class="icons" src="../assets/img/playlist_icon.png" alt="" />
+          <span> Hindi</span>
+        </li>
       </ul>
     </section>
+    <!-- Center-Music-Player-Container -->
     <section class="music-player-content">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-      similique alias voluptates illum ipsum hic odit vel. Aspernatur, aliquid
-      placeat inventore quia necessitatibus, fugiat consectetur iusto molestiae
-      cum aperiam doloremque?
+      <header class="user-account-details">
+        <div class="page-controls">
+          <button>
+            <img
+              class="icons"
+              src="../assets/img/previosu.png"
+              alt="Next section button"
+            />
+          </button>
+          <button>
+            <img
+              class="icons"
+              src="../assets/img/next-page.png"
+              alt=" Previous section button"
+            />
+          </button>
+        </div>
+        <div class="account-details">
+          <img class="icons" src="../assets/img/user-account.png" alt="" />
+          <span>Kevin Rodrigues</span>
+        </div>
+      </header>
+      <main class="main-content-container">
+        <div class="main-content-home">
+          <div class="recommended-songs-container">
+            <h1>Recommended Songs</h1>
+
+            <table class="music-list-table" style="width: 100%">
+              <tr>
+                <th>#</th>
+                <th>Play/Pause</th>
+                <th>Track/Artist</th>
+                <th>Album</th>
+                <th>Time</th>
+                <th>Favourite</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td>Eastside|Halsey</td>
+                <td>Sunrise</td>
+                <td>3:43</td>
+                <td>
+                  <img class="icons" src="../assets/img/favourite.png" alt="" />
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td>Eastside|Halsey</td>
+                <td>Sunrise</td>
+                <td>3:43</td>
+                <td>
+                  <img class="icons" src="../assets/img/favourite.png" alt="" />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- <div class="main-content-all-songs"></div>
+        <div class="main-content-search"></div>
+        <div class="main-content-create-playlist"></div>
+        <div class="main-content-favourites"></div>
+        <div class="main-content-library"></div>
+        <div class="main-content-play-history"></div> -->
+      </main>
     </section>
     <footer class="music-controls">
       <div class="song-details-container">
         <div class="song-img">
-          <img src="../assets/img/Home.svg" alt="Home Icon" />
+          <img src="../assets/img/Home.png" alt="Home Icon" />
         </div>
         <div class="song-details">
           <p class="song-name">Song Name</p>
@@ -80,7 +161,7 @@
             <button class="music-control-buttons">
               <img
                 class="icons"
-                src="../assets/img/previous-track.svg"
+                src="../assets/img/previous-track.png"
                 alt="Previous"
               />
             </button>
@@ -89,14 +170,14 @@
             <button class="music-control-buttons">
               <img
                 class="icons"
-                src="../assets/img/play.svg"
+                src="../assets/img/play.png"
                 alt="Play Button"
               />
             </button>
             <button class="music-control-buttons">
               <img
                 class="icons"
-                src="../assets/img/pause.svg"
+                src="../assets/img/pause.png"
                 alt="Pause Button"
               />
             </button>
@@ -105,7 +186,7 @@
             <button class="music-control-buttons">
               <img
                 class="icons"
-                src="../assets/img/next-track.svg"
+                src="../assets/img/next-track.png"
                 alt="Next"
               />
             </button>
@@ -129,7 +210,7 @@
           <button class="music-control-buttons">
             <img
               class="icons"
-              src="../assets/img/queue_music.svg"
+              src="../assets/img/queue_music.png"
               alt="Add to queue"
             />
           </button>
@@ -138,14 +219,14 @@
           <button class="music-control-buttons">
             <img
               class="icons"
-              src="../assets/img/full_volume.svg"
+              src="../assets/img/full_volume.png"
               alt="Volume"
             />
           </button>
           <button class="music-control-buttons">
             <img
               class="icons"
-              src="../assets/img/mute_volume.svg"
+              src="../assets/img/mute_volume.png"
               alt="Volume"
             />
           </button>

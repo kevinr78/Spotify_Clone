@@ -1,0 +1,42 @@
+
+
+--primary-text-color : #010101
+--secondary-text-color: #d1d3db
+--tertiary-color:#c7b1f0
+
+ SIDEPANEL DESIGN
+  - Browse Music
+    - Home
+    - All Songs
+    - Search
+    - Create Playlist 
+  - Your Music
+    - Favourites
+    - Play History
+    - Your Library (Not sure/ Depends on available data)
+  - Playlist
+    - List of all playlists
+
+
+
+BROWSE MUSIC
+1. Home (ML)
+    - Show recommendations
+2. All Songs (Dictionary)
+    - List of all available Songs
+3. Search  (Array)
+    - Search for songs showing recent searches
+4. Create Playlist (Templating?)
+    - Modal for playlist details
+
+
+YOUR MUSIC
+1. Favourites
+    - Songs Liked by user
+2. Play History
+    - Songs recently played
+3. Your Library 
+    - Artists, Albums, Playlist
+
+PLAYLIST
+ - List of all available playlist
