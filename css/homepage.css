@@ -24,9 +24,9 @@ tr{
    height: 50px;
   
 }
-tr:hover{
+ tr:hover, li:hover, .page-controls button:hover, .active-tab-side-panel{
     background-color: #f8f8fa;
-   
+    border-radius: 20px;
 }
 th{
     text-align: left;
@@ -38,11 +38,18 @@ ul{
 ul>li{
     display: flex;
     align-items: center;   
-    margin: 5px 0;
-    font-size: 12px;
+    margin-top: 5px;
+    font-size: 13px;
+    padding: 5px 0;
     color:#d1d3db ;
 }
 
+ul>li>img{
+    margin-left: 10px;
+}
+ul>h5{
+    margin-bottom: 5px;
+}
 span, td{
     color:#adb5bd ;
 }
@@ -50,6 +57,8 @@ span, td{
     grid-area: sidepanel;
     background-color: #e1e2ed;
     padding-left: 20px;
+    padding-right: 3.5rem;
+    overflow-y: auto;
 }
 .music-player-content{
     grid-area:musicplayer;
@@ -116,9 +125,24 @@ margin-bottom: 1rem;
     border-collapse: collapse;
 }
 
+/* Search-div-css */
 
+.search-songs-input-container{
+    display: flex;
+    justify-content: center;
+    height:2.5rem;
+    margin-top: 2rem;
+}
 
+#mcs{
+    display: none;
+}
 
+.search-songs-container input{
+    width: 70%;
+    border: none;
+    outline: none;
+}
 /* Footer CSS */
 
 .volume-control{
@@ -159,3 +183,13 @@ input[type='range'] {
     background: #c7b1f0;
   
   }
+
+
+
+.main-content-tab-all-songs,.main-content-tab-favourites,.main-content-tab-home,.main-content-tab-search,.main-content-tab-create-playlist,.main-content-tab-play-history,.main-content-tab-your-library{
+    display: none;
+}
+  
+.active-tab-main-content{
+    display: block;
+}

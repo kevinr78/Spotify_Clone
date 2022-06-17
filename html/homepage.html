@@ -14,11 +14,14 @@
       <!-- Side-Panel-Browse-Music -->
       <ul class="home-search-lib-links">
         <h5>Browse Music</h5>
-        <li>
+        <li
+          class="active-tab-side-panel side-panel-tab-home"
+          id="side-panel-tab-home"
+        >
           <img class="icons" src="../assets/img/Home.png" alt=" Home" />
           <span>Home</span>
         </li>
-        <li>
+        <li class="side-panel-tab-all-songs" id="side-panel-tab-all-songs">
           <img
             class="icons"
             src="../assets/img/All_Songs.png"
@@ -26,11 +29,14 @@
           />
           <span> All Songs</span>
         </li>
-        <li>
+        <li class="side-panel-tab-search" id="side-panel-tab-search">
           <img class="icons" src="../assets/img/Search.png" alt="Search" />
           <span> Search</span>
         </li>
-        <li>
+        <li
+          class="side-panel-tab-create-playlist"
+          id="side-panel-tab-create-playlist"
+        >
           <img class="icons" src="../assets/img/Create_playlist.png" alt="" />
           <span>Create Playlist</span>
         </li>
@@ -38,7 +44,7 @@
       <!-- My Music Section -->
       <ul class="create-like-Songs-links">
         <h5>My Music</h5>
-        <li>
+        <li class="side-panel-tab-favourites" id="side-panel-tab-favourites">
           <img
             class="icons"
             src="../assets/img/favourite.png"
@@ -46,7 +52,10 @@
           />
           <span>Favourites</span>
         </li>
-        <li>
+        <li
+          class="side-panel-tab-your-library"
+          id="side-panel-tab-your-library"
+        >
           <img
             class="icons"
             src="../assets/img/your_library.png"
@@ -54,7 +63,10 @@
           />
           <span>Your Library</span>
         </li>
-        <li>
+        <li
+          class="side-panel-tab-play-history"
+          id="side-panel-tab-play-history"
+        >
           <img
             class="icons"
             src="../assets/img/play_history.png"
@@ -66,11 +78,11 @@
       <!-- Side-Panel-Playlists -->
       <ul class="playlists">
         <h5>Playlists</h5>
-        <li>
+        <li class="side-panel-tab-mood">
           <img class="icons" src="../assets/img/playlist_icon.png" alt="Mood" />
           <span>Mood</span>
         </li>
-        <li>
+        <li class="side-panel-tab-hindi">
           <img class="icons" src="../assets/img/playlist_icon.png" alt="" />
           <span> Hindi</span>
         </li>
@@ -79,29 +91,16 @@
     <!-- Center-Music-Player-Container -->
     <section class="music-player-content">
       <header class="user-account-details">
-        <div class="page-controls">
-          <button>
-            <img
-              class="icons"
-              src="../assets/img/previosu.png"
-              alt="Next section button"
-            />
-          </button>
-          <button>
-            <img
-              class="icons"
-              src="../assets/img/next-page.png"
-              alt=" Previous section button"
-            />
-          </button>
-        </div>
         <div class="account-details">
           <img class="icons" src="../assets/img/user-account.png" alt="" />
           <span>Kevin Rodrigues</span>
         </div>
       </header>
       <main class="main-content-container">
-        <div class="main-content-home">
+        <div
+          class="main-content-tab-home active-tab-main-content"
+          id="main-content-tab-home"
+        >
           <div class="recommended-songs-container">
             <h1>Recommended Songs</h1>
 
@@ -137,12 +136,46 @@
             </table>
           </div>
         </div>
-        <!-- <div class="main-content-all-songs"></div>
-        <div class="main-content-search"></div>
-        <div class="main-content-create-playlist"></div>
-        <div class="main-content-favourites"></div>
-        <div class="main-content-library"></div>
-        <div class="main-content-play-history"></div> -->
+        <div class="main-content-tab-search" id="main-content-tab-search">
+          <div class="search-songs-container">
+            <div class="search-songs-input-container">
+              <img src="../assets/img/Search.png" alt="Search" />
+              <input
+                type="text"
+                class="search-songs-input"
+                placeholder="Search for songs"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="main-content-tab-all-songs" id="main-content-tab-all-songs">
+          All Songs
+        </div>
+
+        <div
+          class="main-content-tab-create-playlist"
+          id="main-content-tab-create-playlist"
+        >
+          Create Playlist
+        </div>
+        <div
+          class="main-content-tab-favourites"
+          id="main-content-tab-favourites"
+        >
+          Favourites
+        </div>
+        <div
+          class="main-content-tab-your-library"
+          id="main-content-tab-your-library"
+        >
+          Library
+        </div>
+        <div
+          class="main-content-tab-play-history"
+          id="main-content-tab-play-history"
+        >
+          Play History
+        </div>
       </main>
     </section>
     <footer class="music-controls">
@@ -235,4 +268,5 @@
       </div>
     </footer>
   </body>
+  <script src="../js/index.js"></script>
 </html>

@@ -40,3 +40,15 @@ YOUR MUSIC
 
 PLAYLIST
  - List of all available playlist
+
+
+
+
+
+
+PlayList Functionality
+- Single HTML page
+- onclick fetch songs from DB
+- Filter songs according to playlist 
+- Display Details
+-
