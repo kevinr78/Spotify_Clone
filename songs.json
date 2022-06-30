@@ -1,0 +1,110 @@
+[
+    {
+        "id":"1",
+        "songName":"Weightless",
+        "byArtist":"All Time Low",
+        "location":"../assets/songs/All Time Low - Weightless.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"3:37"
+    },
+    {
+        "id":"2",
+        "songName":"Dear Maria, Count Me in",
+        "byArtist":"All Time Low",
+        "location":"../assets/songs/All Time Low - Dear Maria, Count Me In.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"3:37"
+    },
+    {
+        "id":"3",
+        "songName":"Beautiful",
+        "byArtist":"Bazzi feat. Camila Cabello",
+        "location":"../assets/songs/Bazzi feat. Camila Cabello - Beautiful.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"3:15"
+    },
+    {
+        "id":"4",
+        "songName":"What Would I Change It To  ",
+        "byArtist":"Avicii ft. AlunaGeorge",
+        "location":"../assets/songs/Avicii - What Would I Change It To  ft. AlunaGeorge.mp3",
+        "isFavourite":"true",
+        "playlist":[],
+        "duration":"3:06"
+    },
+    {
+        "id":"5",
+        "songName":"All The Small Things",
+        "byArtist":"Blink-182",
+        "location":"../assets/songs/blink-182 - All The Small Things.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"2:50"
+    },
+    {
+        "id":"6",
+        "songName":"First Date",
+        "byArtist":"Blink-182",
+        "location":"../assets/songs/blink-182 - First Date.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"3:37"
+    },
+    {
+        "id":"7",
+        "songName":"I Miss You",
+        "byArtist":"Blink-182",
+        "location":"../assets/songs/blink-182 - I Miss You.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"3:50"
+    },
+    {
+        "id":"8",
+        "songName":"Crash My Car",
+        "byArtist":"COIN",
+        "location":"../assets/songs/COIN - Crash My Car.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"3:09"
+    },
+    {
+        "id":"9",
+        "songName":"Run",
+        "byArtist":"COIN",
+        "location":"../assets/songs/COIN - RUN.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"3:42"
+    },
+    {
+        "id":"10",
+        "songName":"New",
+        "byArtist":"Daya",
+        "location":"../assets/songs/Daya - New.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"4:00"
+    },
+    {
+        "id":"11",
+        "songName":"San Francisco",
+        "byArtist":"Galantis ft. Sofia Carson",
+        "location":"../assets/songs/Galantis - San Francisco feat. Sofia Carson.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"2:50"
+    },
+    {
+        "id":"12",
+        "songName":"Cigarette Daydreams",
+        "byArtist":"Cage The Elephant",
+        "location":"../assets/songs/Cigarette Daydreams - Cage the Elephant.mp3",
+        "isFavourite":"false",
+        "playlist":[],
+        "duration":"3:29"
+    }
+]

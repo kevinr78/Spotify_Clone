@@ -193,3 +193,12 @@ input[type='range'] {
 .active-tab-main-content{
     display: block;
 }
+
+
+#Pause{
+    display: none;
+}
+
+.play-pause-button-svg{
+    transition: 1s ease;
+}

@@ -1,64 +1,40 @@
-/* Sidepanel Functionality */
-/* Sidepanel Variables */
-let Hometab = document.getElementById("side-panel-tab-home");
-let AllSongstab = document.getElementById("side-panel-tab-all-songs");
-let Searchtab = document.getElementById("side-panel-tab-search");
-let CreatePlaylisttab = document.getElementById(
-  "side-panel-tab-create-playlist"
-);
-let Favouritetab = document.getElementById("side-panel-tab-favourites");
-let YourLibrarytab = document.getElementById("side-panel-tab-your-library");
-let PlayHistorytab = document.getElementById("side-panel-tab-play-history");
+const AUDIOTRACK = document.getElementById("audio-track");
+const SONGAUDIO = document.getElementById("song");
+const BUFFEREDAMOUNT = SONGAUDIO.buffered.end(SONGAUDIO.buffered.length - 1);
+const SEEKABLEAMOUNT = SONGAUDIO.seekable.end(SONGAUDIO.seekable.length - 1);
 
-/* Main Content Variables */
-let HomeMainContent = document.getElementById("main-content-tab-home");
-let AllSongsMainContent = document.getElementById("main-content-tab-all-songs");
-let SearchMainContent = document.getElementById("main-content-tab-search");
-let CreatePlaylistMainContent = document.getElementById(
-  "main-content-tab-create-playlist"
-);
-let FavouriteMainContent = document.getElementById(
-  "main-content-tab-favourites"
-);
-let YourLibraryMainContent = document.getElementById(
-  "main-content-tab-your-library"
-);
-let PlayHistoryMainContent = document.getElementById(
-  "main-content-tab-play-history"
-);
+document.getElementById("Play").onclick = () => {
+  document.getElementById("Pause").style.display = "block";
+  document.getElementById("Play").style.display = "none";
+};
 
-sidepanelButtons = [
-  Hometab,
-  AllSongstab,
-  Searchtab,
-  CreatePlaylisttab,
-  Favouritetab,
-  YourLibrarytab,
-  PlayHistorytab,
-];
+/* Display Audio Duration */
 
-/* Adding Click event Listener */
-sidepanelButtons.forEach((ele) => {
-  ele.onclick = () => {
-    displayCorrespondingTab(ele);
-  };
-});
-
-function displayCorrespondingTab(element) {
-  /* Add backgroud */
-  let prefix = "main-content";
-  let elementName = element.id.slice(10);
-  let displayBlock = document.getElementById(prefix + elementName);
-
-  /* Removing ClassList from sidepanel */
-  Array.from(document.querySelectorAll("li.active-tab-side-panel")).forEach(
-    (el) => el.classList.remove("active-tab-side-panel")
-  );
-  element.classList.toggle("active-tab-side-panel");
-
-  /* Displaying corresponding Content tab */
-  Array.from(document.querySelectorAll("div.active-tab-main-content")).forEach(
-    (el) => el.classList.remove("active-tab-main-content")
-  );
-  displayBlock.classList.add("active-tab-main-content");
+function displayAudioDuration(duration) {
+  document.getElementById("end-time").innerHTML = calculateTime(duration);
 }
+
+function calculateTime(secs) {
+  let mins = Math.floor(secs / 60);
+  let seconds = Math.floor(secs % 60);
+  let calculatedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+  return `${mins}:${calculatedSeconds}`;
+}
+
+if (SONGAUDIO.readyState > 0) {
+  displayAudioDuration(SONGAUDIO.duration);
+  AUDIOTRACK.max = Math.floor(SONGAUDIO.duration);
+} else {
+  SONGAUDIO.addEventListener("loadedmetadata", () => {
+    displayAudioDuration(SONGAUDIO.duration);
+    AUDIOTRACK.max = Math.floor(SONGAUDIO.duration);
+  });
+}
+
+/* function displayBufferedAmount(){
+  let audioTrackContainer = document.getElementById('audio-track-container')
+
+  audioTrackContainer.style.setProperty('--buffered-wid')
+}
+SONGAUDIO.addEventListener("progress", displayBufferedAmount);
+ */

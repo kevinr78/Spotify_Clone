@@ -149,7 +149,10 @@
           </div>
         </div>
         <div class="main-content-tab-all-songs" id="main-content-tab-all-songs">
-          All Songs
+          <h2>All Songs</h2>
+          <ul class="songs-list">
+            <li class="song-details"></li>
+          </ul>
         </div>
 
         <div
@@ -200,20 +203,46 @@
             </button>
           </div>
           <div class="play-pause-button">
-            <button class="music-control-buttons">
-              <img
-                class="icons"
-                src="../assets/img/play.png"
-                alt="Play Button"
-              />
-            </button>
-            <button class="music-control-buttons">
-              <img
-                class="icons"
-                src="../assets/img/pause.png"
-                alt="Pause Button"
-              />
-            </button>
+            <svg
+              width="206"
+              height="149"
+              viewBox="0 0 206 149"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="play-pause-button-svg">
+                <g id="Play">
+                  <path
+                    id="Polygon 1"
+                    d="M122 81.5L73.25 106.182V56.8183L122 81.5Z"
+                    fill="#C7B1EF"
+                  />
+                  <path
+                    id="Polygon 2"
+                    d="M109.812 81.5L79.3438 96.9261V66.0739L109.812 81.5Z"
+                    fill="white"
+                  />
+                </g>
+                <g id="Pause">
+                  <rect
+                    id="Rectangle 3"
+                    x="72"
+                    y="64"
+                    width="9.42857"
+                    height="39.7"
+                    fill="#C7B1EF"
+                  />
+                  <rect
+                    id="Rectangle 4"
+                    x="106.571"
+                    y="64"
+                    width="9.42857"
+                    height="39.7"
+                    fill="#C7B1EF"
+                  />
+                </g>
+              </g>
+            </svg>
           </div>
           <div class="next-track">
             <button class="music-control-buttons">
@@ -225,17 +254,22 @@
             </button>
           </div>
         </div>
-        <div class="audio-track">
-          <span class="start-time">0:00</span>
+        <div class="audio-track" id="audio-track-container">
+          <span id="start-time" class="time">0:00</span>
           <input
             type="range"
             name="audio-track"
             id="audio-track"
             min="0"
-            max="100"
+            max=""
             value="0"
           />
-          <span class="end-time">0:00</span>
+          <audio
+            id="song"
+            preload="metadata"
+            src="../assets/songs/All Time Low - Weightless.mp3"
+          ></audio>
+          <span id="end-time" class="time">0:00</span>
         </div>
       </div>
       <div class="playback-features">
@@ -269,4 +303,5 @@
     </footer>
   </body>
   <script src="../js/index.js"></script>
+  <script src="../js/NavigateTabs.js"></script>
 </html>
