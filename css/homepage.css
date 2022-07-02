@@ -64,9 +64,14 @@ span, td{
     grid-area:musicplayer;
     background-color: #e7e8f1;
 }
-/* .music-player-content{
-    grid-area:musicplayer;
-} */
+
+.main-content-tab-all-songs,.main-content-tab-favourites,.main-content-tab-home,.main-content-tab-search,.main-content-tab-create-playlist,.main-content-tab-play-history,.main-content-tab-your-library{
+    display: none;
+}
+  
+.active-tab-main-content{
+    display: block;
+}
 
 
 .icons{
@@ -103,12 +108,10 @@ span, td{
     align-items: center;
     border-bottom: 2px solid #C7B1EF;
     height: 3rem;
-
 }
 
 .recommended-songs-container{
-    padding: 3% 5%;
-   
+    padding: 3% 5%;  
 }
 
 .recommended-songs-container h1 {
@@ -120,85 +123,44 @@ margin-bottom: 1rem;
     position: relative;
 }
 
-
 .music-list-table{
     border-collapse: collapse;
 }
 
-/* Search-div-css */
-
-.search-songs-input-container{
-    display: flex;
-    justify-content: center;
-    height:2.5rem;
-    margin-top: 2rem;
-}
-
-#mcs{
-    display: none;
-}
-
-.search-songs-container input{
-    width: 70%;
-    border: none;
-    outline: none;
-}
 /* Footer CSS */
 
-.volume-control{
-    position: relative;
-}
-.volume-control  input[type='range']{
-    position: absolute;
-    top :10px;
-}
-
-.audio-track  input[type='range']{
-    width: 400px;
-}
-input[type='range'] {
-
-   
+#seek-slider, #volume-slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     height: 5px;
-    -webkit-appearance: none;
-    border-radius: 20px;
-    /* background-color: #c7b1f0; */
-  }
-  
-  input[type='range']::-webkit-slider-runnable-track {
-    height: 10px;
-    -webkit-appearance: none;
-    color: #c7b1f0;
-    margin-top: -1px;
-    border-radius: 20px;
-    background-color: #d1d3db;
-  }
-  
-  input[type='range']::-webkit-slider-thumb {
-    width: 10px;
-    -webkit-appearance: none;
-    height: 10px;
-    border-radius: 10px;
-    cursor: ew-resize;
-    background: #c7b1f0;
-  
+    background: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
   }
 
-
-
-.main-content-tab-all-songs,.main-content-tab-favourites,.main-content-tab-home,.main-content-tab-search,.main-content-tab-create-playlist,.main-content-tab-play-history,.main-content-tab-your-library{
-    display: none;
+  #seek_slider {
+    width: 60%;
+  }
+   
+  #seek-slider::-webkit-slider-thumb,
+  #volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
 }
-  
-.active-tab-main-content{
-    display: block;
-}
+ 
+/* .seek-slider-container{
+
+} */
 
 
 #Pause{
     display: none;
-}
-
-.play-pause-button-svg{
-    transition: 1s ease;
 }

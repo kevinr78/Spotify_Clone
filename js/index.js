@@ -1,7 +1,15 @@
-const AUDIOTRACK = document.getElementById("audio-track");
-const SONGAUDIO = document.getElementById("song");
-const BUFFEREDAMOUNT = SONGAUDIO.buffered.end(SONGAUDIO.buffered.length - 1);
-const SEEKABLEAMOUNT = SONGAUDIO.seekable.end(SONGAUDIO.seekable.length - 1);
+const audio = document.querySelector("audio");
+const SEEKSLIDER = document.getElementById("seek-slider");
+const VOLUMESLIDER = document.getElementById("volume-slider");
+const seekSliderContainer = document.getElementById("seek-slider-container");
+const volumeControlContainer = document.getElementById(
+  "volume-control-container"
+);
+const CURRENTTIME = document.getElementById("current-time");
+const PLAY = document.getElementById("Play");
+const PAUSE = document.getElementById("Pause");
+isPlaying = false;
+isMuted = false;
 
 document.getElementById("Play").onclick = () => {
   document.getElementById("Pause").style.display = "block";
@@ -11,7 +19,7 @@ document.getElementById("Play").onclick = () => {
 /* Display Audio Duration */
 
 function displayAudioDuration(duration) {
-  document.getElementById("end-time").innerHTML = calculateTime(duration);
+  document.getElementById("total-duration").innerHTML = calculateTime(duration);
 }
 
 function calculateTime(secs) {
@@ -21,20 +29,65 @@ function calculateTime(secs) {
   return `${mins}:${calculatedSeconds}`;
 }
 
-if (SONGAUDIO.readyState > 0) {
-  displayAudioDuration(SONGAUDIO.duration);
-  AUDIOTRACK.max = Math.floor(SONGAUDIO.duration);
+if (audio.readyState > 0) {
+  displayAudioDuration(audio.duration);
+  SEEKSLIDER.max = Math.floor(audio.duration);
 } else {
-  SONGAUDIO.addEventListener("loadedmetadata", () => {
-    displayAudioDuration(SONGAUDIO.duration);
-    AUDIOTRACK.max = Math.floor(SONGAUDIO.duration);
+  audio.addEventListener("loadedmetadata", () => {
+    displayAudioDuration(audio.duration);
+    SEEKSLIDER.max = Math.floor(audio.duration);
   });
 }
 
-/* function displayBufferedAmount(){
-  let audioTrackContainer = document.getElementById('audio-track-container')
+/* Updating Slider Values */
 
-  audioTrackContainer.style.setProperty('--buffered-wid')
+SEEKSLIDER.addEventListener("input", (e) => {
+  showRangeProgress(e.target);
+});
+
+VOLUMESLIDER.addEventListener("input", (e) => {
+  audio.volume = e.target.value / 100;
+  showRangeProgress(e.target);
+});
+
+function showRangeProgress({ name, value }) {
+  if (name === "seek-slider") {
+    SEEKSLIDER.value = audio.currentTime;
+    audio.currentTime = (audio.duration * value) / 100;
+    CURRENTTIME.textContent = calculateTime(audio.currentTime);
+  } else {
+    audio.volume = VOLUMESLIDER.value / 100;
+  }
 }
-SONGAUDIO.addEventListener("progress", displayBufferedAmount);
- */
+
+/* Play Song */
+document
+  .getElementById("play-pause-container")
+  .addEventListener("click", () => {
+    if (isPlaying == false) {
+      audio.play();
+      isPlaying = true;
+    } else {
+      audio.pause();
+      isPlaying = false;
+    }
+  });
+
+SEEKSLIDER.addEventListener("change", () => {
+  audio.currentTime = SEEKSLIDER.value;
+});
+
+audio.addEventListener("timeupdate", () => {
+  SEEKSLIDER.value = Math.floor(audio.currentTime);
+  CURRENTTIME.textContent = calculateTime(audio.currentTime);
+});
+
+volumeControlContainer.addEventListener("click", () => {
+  if (!isMuted) {
+    audio.muted = true;
+    isMuted = true;
+  } else {
+    audio.muted = false;
+    isMuted = false;
+  }
+});

@@ -182,6 +182,10 @@
       </main>
     </section>
     <footer class="music-controls">
+      <audio
+        src="../assets/songs/blink-182 - All The Small Things.mp3"
+        preload="metadata"
+      ></audio>
       <div class="song-details-container">
         <div class="song-img">
           <img src="../assets/img/Home.png" alt="Home Icon" />
@@ -202,7 +206,7 @@
               />
             </button>
           </div>
-          <div class="play-pause-button">
+          <div class="play-pause-button" id="play-pause-container">
             <svg
               width="206"
               height="149"
@@ -254,22 +258,17 @@
             </button>
           </div>
         </div>
-        <div class="audio-track" id="audio-track-container">
-          <span id="start-time" class="time">0:00</span>
+        <div class="seek-slider-container" id="seek-slider-container">
+          <div id="current-time">00:00</div>
           <input
             type="range"
-            name="audio-track"
-            id="audio-track"
+            name="seek-slider"
             min="0"
-            max=""
+            max="100"
             value="0"
+            id="seek-slider"
           />
-          <audio
-            id="song"
-            preload="metadata"
-            src="../assets/songs/All Time Low - Weightless.mp3"
-          ></audio>
-          <span id="end-time" class="time">0:00</span>
+          <div id="total-duration">00:00</div>
         </div>
       </div>
       <div class="playback-features">
@@ -282,7 +281,7 @@
             />
           </button>
         </div>
-        <div class="volume-control">
+        <div id="volume-control-container">
           <button class="music-control-buttons">
             <img
               class="icons"
@@ -297,7 +296,14 @@
               alt="Volume"
             />
           </button>
-          <input type="range" name="volume-control" id="volume-control" />
+          <input
+            type="range"
+            name="volume-slider"
+            min="0"
+            max="100"
+            value="100"
+            id="volume-slider"
+          />
         </div>
       </div>
     </footer>
