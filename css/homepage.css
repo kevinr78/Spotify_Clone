@@ -127,6 +127,15 @@ margin-bottom: 1rem;
     border-collapse: collapse;
 }
 
+.seek-slider-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-top: 1rem;
+} 
+
+
 /* Footer CSS */
 
 #seek-slider, #volume-slider {
@@ -134,15 +143,14 @@ margin-bottom: 1rem;
     -moz-appearance: none;
     appearance: none;
     height: 5px;
-    background: black;
+    background: #b2b7bd;
+    border-radius: 4px;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-  }
-
-  #seek_slider {
     width: 60%;
   }
+
    
   #seek-slider::-webkit-slider-thumb,
   #volume-slider::-webkit-slider-thumb {
@@ -155,12 +163,31 @@ margin-bottom: 1rem;
   cursor: pointer;
   border-radius: 50%;
 }
- 
-/* .seek-slider-container{
+#volume-control-container input{
 
+    position: relative;
+    top: -8px;
+}
+
+/* #song-elapsed-portion{
+    content: '';
+    background-color: yellow;
+    max-width: 100px;
+    left: 40px;
+    height: 5px;
+    position: absolute;
 } */
+ 
+#current-time , #total-duration{
+    position: relative;
+    top: -5px;
+    margin: 0 10px;
+}
 
-
-#Pause{
+#Pause,#mute-volume{
     display: none;
+    
+}
+#play-pause-container{
+    margin: 0 15px;
 }

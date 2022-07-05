@@ -1,12 +1,7 @@
-<svg width="206" height="149" viewBox="0 0 206 149" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="play-pause-button">
-<g id="Play">
-<path id="Polygon 1" d="M122 81.5L73.25 106.182V56.8183L122 81.5Z" fill="#C7B1EF"/>
-<path id="Polygon 2" d="M109.812 81.5L79.3438 96.9261V66.0739L109.812 81.5Z" fill="white"/>
-</g>
-<g id="Pause">
-<rect id="Rectangle 3" x="72" y="64" width="9.42857" height="39.7" fill="#C7B1EF"/>
-<rect id="Rectangle 4" x="106.571" y="64" width="9.42857" height="39.7" fill="#C7B1EF"/>
-</g>
+<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Play-pause-button">
+<rect id="Rectangle 1" x="23" width="10" height="32.67" fill="#C7B1EF"/>
+<rect id="Rectangle 2" width="10" height="32.67" fill="#C7B1EF"/>
+<path id="Play" d="M1 31.5V0L31.25 15.75L1 31.5ZM5.125 25.3688L23.6188 15.75L5.125 6.13125V25.3688Z" fill="#C7B1EF"/>
 </g>
 </svg>

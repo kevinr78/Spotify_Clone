@@ -2,19 +2,12 @@ const audio = document.querySelector("audio");
 const SEEKSLIDER = document.getElementById("seek-slider");
 const VOLUMESLIDER = document.getElementById("volume-slider");
 const seekSliderContainer = document.getElementById("seek-slider-container");
-const volumeControlContainer = document.getElementById(
-  "volume-control-container"
-);
+const volumeIcon = document.getElementById("volume-icon");
 const CURRENTTIME = document.getElementById("current-time");
 const PLAY = document.getElementById("Play");
 const PAUSE = document.getElementById("Pause");
 isPlaying = false;
 isMuted = false;
-
-document.getElementById("Play").onclick = () => {
-  document.getElementById("Pause").style.display = "block";
-  document.getElementById("Play").style.display = "none";
-};
 
 /* Display Audio Duration */
 
@@ -48,6 +41,11 @@ SEEKSLIDER.addEventListener("input", (e) => {
 VOLUMESLIDER.addEventListener("input", (e) => {
   audio.volume = e.target.value / 100;
   showRangeProgress(e.target);
+  if (audio.volume === 0) {
+    document.getElementById("mute-volume").style.display = "block";
+  } else {
+    document.getElementById("mute-volume").style.display = "none";
+  }
 });
 
 function showRangeProgress({ name, value }) {
@@ -67,9 +65,11 @@ document
     if (isPlaying == false) {
       audio.play();
       isPlaying = true;
+      updatePlayPauseIcon();
     } else {
       audio.pause();
       isPlaying = false;
+      updatePlayPauseIcon();
     }
   });
 
@@ -82,12 +82,36 @@ audio.addEventListener("timeupdate", () => {
   CURRENTTIME.textContent = calculateTime(audio.currentTime);
 });
 
-volumeControlContainer.addEventListener("click", () => {
+volumeIcon.addEventListener("click", (e) => {
   if (!isMuted) {
     audio.muted = true;
     isMuted = true;
+    adjustVolume();
   } else {
     audio.muted = false;
     isMuted = false;
+    adjustVolume();
   }
 });
+
+function updatePlayPauseIcon() {
+  if (isPlaying) {
+    document.getElementById("Pause").style.display = "block";
+    document.getElementById("Play").style.display = "none";
+  } else {
+    document.getElementById("Play").style.display = "block";
+    document.getElementById("Pause").style.display = "none";
+  }
+}
+
+function adjustVolume() {
+  if (isMuted) {
+    audio.volume = 0;
+    VOLUMESLIDER.value = 0;
+    document.getElementById("mute-volume").style.display = "block";
+  } else {
+    audio.volume = 75;
+    VOLUMESLIDER.value = 75;
+    document.getElementById("mute-volume").style.display = "none";
+  }
+}

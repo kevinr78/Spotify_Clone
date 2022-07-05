@@ -208,43 +208,33 @@
           </div>
           <div class="play-pause-button" id="play-pause-container">
             <svg
-              width="206"
-              height="149"
-              viewBox="0 0 206 149"
+              width="22"
+              height="22"
+              viewBox="0 0 33 33"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g id="play-pause-button-svg">
-                <g id="Play">
-                  <path
-                    id="Polygon 1"
-                    d="M122 81.5L73.25 106.182V56.8183L122 81.5Z"
-                    fill="#C7B1EF"
-                  />
-                  <path
-                    id="Polygon 2"
-                    d="M109.812 81.5L79.3438 96.9261V66.0739L109.812 81.5Z"
-                    fill="white"
-                  />
-                </g>
+              <g id="Play-pause-button">
                 <g id="Pause">
                   <rect
-                    id="Rectangle 3"
-                    x="72"
-                    y="64"
-                    width="9.42857"
-                    height="39.7"
+                    id="pause-rect-1"
+                    x="23"
+                    width="10"
+                    height="32.67"
                     fill="#C7B1EF"
                   />
                   <rect
-                    id="Rectangle 4"
-                    x="106.571"
-                    y="64"
-                    width="9.42857"
-                    height="39.7"
+                    id="pause-rect-2"
+                    width="10"
+                    height="32.67"
                     fill="#C7B1EF"
                   />
                 </g>
+                <path
+                  id="Play"
+                  d="M1 31.5V0L31.25 15.75L1 31.5ZM5.125 25.3688L23.6188 15.75L5.125 6.13125V25.3688Z"
+                  fill="#C7B1EF"
+                />
               </g>
             </svg>
           </div>
@@ -259,7 +249,8 @@
           </div>
         </div>
         <div class="seek-slider-container" id="seek-slider-container">
-          <div id="current-time">00:00</div>
+          <span id="current-time">00:00</span>
+          <span id="song-elapsed-portion"></span>
           <input
             type="range"
             name="seek-slider"
@@ -268,7 +259,7 @@
             value="0"
             id="seek-slider"
           />
-          <div id="total-duration">00:00</div>
+          <span id="total-duration">00:00</span>
         </div>
       </div>
       <div class="playback-features">
@@ -282,20 +273,29 @@
           </button>
         </div>
         <div id="volume-control-container">
-          <button class="music-control-buttons">
-            <img
-              class="icons"
-              src="../assets/img/full_volume.png"
-              alt="Volume"
-            />
-          </button>
-          <button class="music-control-buttons">
-            <img
-              class="icons"
-              src="../assets/img/mute_volume.png"
-              alt="Volume"
-            />
-          </button>
+          <svg
+            width="44"
+            height="25"
+            id="volume-icon"
+            viewBox="0 0 66 55"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="full_volume">
+              <path
+                id="Volume"
+                d="M38.5 47.4948V43.9427C42.9458 42.8733 46.5781 40.8203 49.3969 37.7839C52.2156 34.7474 53.625 31.3003 53.625 27.4427C53.625 23.5851 52.2271 20.1285 49.4313 17.0729C46.6354 14.0174 42.9917 11.974 38.5 10.9427V7.39062C44.1833 8.46007 48.8125 10.8568 52.3875 14.5807C55.9625 18.3047 57.75 22.592 57.75 27.4427C57.75 32.2934 55.9625 36.5807 52.3875 40.3047C48.8125 44.0286 44.1833 46.4254 38.5 47.4948ZM8.25 34.375V20.625H19.25L33 9.16667V45.8333L19.25 34.375H8.25ZM37.125 37.125V17.8177C39.6 18.467 41.5938 19.6892 43.1063 21.4844C44.6188 23.2795 45.375 25.2847 45.375 27.5C45.375 29.7535 44.6188 31.7587 43.1063 33.5156C41.5938 35.2726 39.6 36.4757 37.125 37.125ZM28.875 17.875L21.1063 24.0625H12.375V30.9375H21.1063L28.875 37.1823V17.875Z"
+                fill="#C7B1EF"
+              />
+              <path
+                id="mute-volume"
+                d="M14.45 5.6225L58 50"
+                stroke="#C7B1EF"
+                stroke-width="4"
+              />
+            </g>
+          </svg>
+
           <input
             type="range"
             name="volume-slider"
