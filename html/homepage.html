@@ -14,14 +14,14 @@
       <!-- Side-Panel-Browse-Music -->
       <ul class="home-search-lib-links">
         <h5>Browse Music</h5>
-        <li
-          class="active-tab-side-panel side-panel-tab-home"
-          id="side-panel-tab-home"
-        >
+        <li class="side-panel-tab-home" id="side-panel-tab-home">
           <img class="icons" src="../assets/img/Home.png" alt=" Home" />
           <span>Home</span>
         </li>
-        <li class="side-panel-tab-all-songs" id="side-panel-tab-all-songs">
+        <li
+          class="side-panel-tab-all-songs active-tab-side-panel"
+          id="side-panel-tab-all-songs"
+        >
           <img
             class="icons"
             src="../assets/img/All_Songs.png"
@@ -97,43 +97,9 @@
         </div>
       </header>
       <main class="main-content-container">
-        <div
-          class="main-content-tab-home active-tab-main-content"
-          id="main-content-tab-home"
-        >
+        <div class="main-content-tab-home" id="main-content-tab-home">
           <div class="recommended-songs-container">
             <h1>Recommended Songs</h1>
-
-            <table class="music-list-table" style="width: 100%">
-              <tr>
-                <th>#</th>
-                <th>Play/Pause</th>
-                <th>Track/Artist</th>
-                <th>Album</th>
-                <th>Time</th>
-                <th>Favourite</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td></td>
-                <td>Eastside|Halsey</td>
-                <td>Sunrise</td>
-                <td>3:43</td>
-                <td>
-                  <img class="icons" src="../assets/img/favourite.png" alt="" />
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td></td>
-                <td>Eastside|Halsey</td>
-                <td>Sunrise</td>
-                <td>3:43</td>
-                <td>
-                  <img class="icons" src="../assets/img/favourite.png" alt="" />
-                </td>
-              </tr>
-            </table>
           </div>
         </div>
         <div class="main-content-tab-search" id="main-content-tab-search">
@@ -148,11 +114,29 @@
             </div>
           </div>
         </div>
-        <div class="main-content-tab-all-songs" id="main-content-tab-all-songs">
+        <div
+          class="main-content-tab-all-songs active-tab-main-content"
+          id="main-content-tab-all-songs"
+        >
           <h2>All Songs</h2>
-          <ul class="songs-list">
-            <li class="song-details"></li>
-          </ul>
+
+          <table
+            class="music-list-table"
+            id="music-list-table"
+            style="width: 100%"
+          >
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Play/Pause</th>
+                <th>Track</th>
+                <th>Artist</th>
+                <th>Time</th>
+                <th>Favourite</th>
+              </tr>
+            </thead>
+            <tbody id="songs-list"></tbody>
+          </table>
         </div>
 
         <div
@@ -182,7 +166,7 @@
       </main>
     </section>
     <footer class="music-controls">
-      <audio preload="metadata"></audio>
+      <audio preload="metadata" muted></audio>
       <div class="song-details-container">
         <div class="song-img">
           <img src="../assets/img/Home.png" alt="Home Icon" />
@@ -196,11 +180,20 @@
         <div class="song-controls">
           <div class="previous-track">
             <button class="music-control-buttons">
-              <img
+              <svg
                 class="icons"
-                src="../assets/img/previous-track.png"
-                alt="Previous"
-              />
+                id="previous-track"
+                width="66"
+                height="55"
+                viewBox="0 0 66 55"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.125 41.25V13.75H19.25V41.25H15.125ZM50.875 41.25L27.0875 27.5L50.875 13.75V41.25ZM46.75 34.6615V20.3385L34.3063 27.5L46.75 34.6615Z"
+                  fill="#C7B1EF"
+                />
+              </svg>
             </button>
           </div>
           <div class="play-pause-button" id="play-pause-container">
@@ -211,7 +204,7 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g id="Play-pause-button">
+              <g class="Play-pause-button">
                 <g id="Pause">
                   <rect
                     id="pause-rect-1"
@@ -237,11 +230,20 @@
           </div>
           <div class="next-track">
             <button class="music-control-buttons">
-              <img
+              <svg
                 class="icons"
-                src="../assets/img/next-track.png"
-                alt="Next"
-              />
+                id="next-track"
+                width="66"
+                height="55"
+                viewBox="0 0 66 55"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M46.625 41.5V14H50.75V41.5H46.625ZM15 41.5V14L38.7875 27.75L15 41.5ZM19.125 34.9115L31.5687 27.75L19.125 20.5885V34.9115Z"
+                  fill="#C7B1EF"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -306,5 +308,6 @@
     </footer>
   </body>
   <script src="../js/index.js"></script>
+  <script src="../js/AllSongs.js"></script>
   <script src="../js/NavigateTabs.js"></script>
 </html>

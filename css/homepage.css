@@ -2,11 +2,9 @@
 body{
     display: grid;
     height: 100vh;
-    grid-template-rows: auto;
+
     grid-template-columns: repeat(5,20%);
     grid-template-areas: 
-    "sidepanel  musicplayer musicplayer musicplayer musicplayer"
-    "sidepanel  musicplayer musicplayer musicplayer musicplayer"
     "sidepanel  musicplayer musicplayer musicplayer musicplayer"
     "sidepanel  musicplayer musicplayer musicplayer musicplayer"
     "sidepanel  musicplayer musicplayer musicplayer musicplayer"
@@ -22,16 +20,18 @@ footer{
 }
 tr{
    height: 50px;
-  
+   padding-left: 20px;
 }
- tr:hover, li:hover, .page-controls button:hover, .active-tab-side-panel{
+ tbody> tr:hover, li:hover, .page-controls button:hover, .active-tab-side-panel{
     background-color: #f8f8fa;
     border-radius: 20px;
+}
+tbody{
+    overflow: auto;
 }
 th{
     text-align: left;
 }
-
 ul{
     margin-top: 20px;
 }
@@ -63,17 +63,17 @@ span, td{
 .music-player-content{
     grid-area:musicplayer;
     background-color: #e7e8f1;
+    overflow-y: scroll;
 }
 
 .main-content-tab-all-songs,.main-content-tab-favourites,.main-content-tab-home,.main-content-tab-search,.main-content-tab-create-playlist,.main-content-tab-play-history,.main-content-tab-your-library{
     display: none;
+    padding: 3% 5%;  
 }
   
 .active-tab-main-content{
     display: block;
 }
-
-
 .icons{
     height: 24px;
     width: 24px;
@@ -108,10 +108,6 @@ span, td{
     align-items: center;
     border-bottom: 2px solid #C7B1EF;
     height: 3rem;
-}
-
-.recommended-songs-container{
-    padding: 3% 5%;  
 }
 
 .recommended-songs-container h1 {
@@ -184,7 +180,7 @@ margin-bottom: 1rem;
     margin: 0 10px;
 }
 
-#Pause,#mute-volume{
+#Pause,.allSongs-Pause,#mute-volume{
     display: none;
     
 }

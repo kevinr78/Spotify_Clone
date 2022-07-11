@@ -1,0 +1,19 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Music Player",
+  "main": "y",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinr78/Spotify_Clone.git"
+  },
+  "author": "Kevin Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinr78/Spotify_Clone/issues"
+  },
+  "homepage": "https://github.com/kevinr78/Spotify_Clone#readme"
+}
